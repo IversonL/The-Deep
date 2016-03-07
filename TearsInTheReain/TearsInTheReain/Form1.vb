@@ -151,11 +151,9 @@
     End Sub
 
     Sub ItemClick(ByRef Tile As PictureBox)
-        If (Tile.Bounds.X - 10) <= Player.Bounds.X >= (Tile.Bounds.X + 10) Then
+        If ((Tile.Bounds.Y + 50) >= Player.Bounds.Y And Player.Bounds.Y >= (Tile.Bounds.Y - 50)) And ((Tile.Bounds.X + 50) >= Player.Bounds.X And Player.Bounds.X >= (Tile.Bounds.X - 50)) Then
             MsgBox("Test")
         End If
-
-
     End Sub
 
     Sub CollisionDetection()
