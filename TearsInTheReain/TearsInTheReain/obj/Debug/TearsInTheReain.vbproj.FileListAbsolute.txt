@@ -9,3 +9,14 @@ c:\users\liam iverson\documents\visual studio 2015\Projects\TearsInTheReain\Tear
 c:\users\liam iverson\documents\visual studio 2015\Projects\TearsInTheReain\TearsInTheReain\obj\Debug\TearsInTheReain.exe
 c:\users\liam iverson\documents\visual studio 2015\Projects\TearsInTheReain\TearsInTheReain\obj\Debug\TearsInTheReain.xml
 c:\users\liam iverson\documents\visual studio 2015\Projects\TearsInTheReain\TearsInTheReain\obj\Debug\TearsInTheReain.pdb
+C:\Users\Liam Iverson\Documents\GitHub\The-Deep\TearsInTheReain\TearsInTheReain\bin\Debug\TearsInTheReain.exe.config
+C:\Users\Liam Iverson\Documents\GitHub\The-Deep\TearsInTheReain\TearsInTheReain\obj\Debug\TearsInTheReain.exe
+C:\Users\Liam Iverson\Documents\GitHub\The-Deep\TearsInTheReain\TearsInTheReain\obj\Debug\TearsInTheReain.xml
+C:\Users\Liam Iverson\Documents\GitHub\The-Deep\TearsInTheReain\TearsInTheReain\obj\Debug\TearsInTheReain.pdb
+C:\Users\Liam Iverson\Documents\GitHub\The-Deep\TearsInTheReain\TearsInTheReain\bin\Debug\TearsInTheReain.exe
+C:\Users\Liam Iverson\Documents\GitHub\The-Deep\TearsInTheReain\TearsInTheReain\bin\Debug\TearsInTheReain.pdb
+C:\Users\Liam Iverson\Documents\GitHub\The-Deep\TearsInTheReain\TearsInTheReain\bin\Debug\TearsInTheReain.xml
+C:\Users\Liam Iverson\Documents\GitHub\The-Deep\TearsInTheReain\TearsInTheReain\obj\Debug\TearsInTheReain.vbprojResolveAssemblyReference.cache
+C:\Users\Liam Iverson\Documents\GitHub\The-Deep\TearsInTheReain\TearsInTheReain\obj\Debug\TearsInTheReain.Form1.resources
+C:\Users\Liam Iverson\Documents\GitHub\The-Deep\TearsInTheReain\TearsInTheReain\obj\Debug\TearsInTheReain.Resources.resources
+C:\Users\Liam Iverson\Documents\GitHub\The-Deep\TearsInTheReain\TearsInTheReain\obj\Debug\TearsInTheReain.vbproj.GenerateResource.Cache
