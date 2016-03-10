@@ -9,6 +9,10 @@
     Dim OverworldMap(3) As String
     Dim CurrentOverworldPos As Integer = 4
 
+    'Enemies'
+    Dim EnemyMapLocation() As String
+    Dim Enemies(10, 10, 2) As PictureBox
+
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Map = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -73,6 +77,8 @@
         If LoadMap = True Then
             Call MapRead()
             Call MapLoad()
+            Call EnemyRead()
+            Call EnemySpawn()
             LoadMap = False
         Else
             Call PlayerAnimation(PlayerAttack)
@@ -241,14 +247,31 @@
     End Sub
 
     Sub EnemyRead()
-
+        Dim EnemyReader As System.IO.StreamReader
+        EnemyReader = My.Computer.FileSystem.OpenTextFileReader("C:\Users\Liam Iverson\Desktop\DungeonCrawl\EnemyLocations\EnemySpawn" & CurrentMap & ".txt")
+        For x As Integer = 0 To 9
+            EnemyMapLocation(x) = EnemyReader.ReadLine
+        Next
     End Sub
 
     Sub EnemySpawn()
+        Dim EnemyLocal As String = Nothing
+        For x As Integer = 0 To 9
+            EnemyLocal += Map(x)
+        Next
+        For x As Integer = 0 To 89
+            If EnemyLocal.Chars(x) = "G" Then
+                Dim box As PictureBox = New PictureBox
+                box.Location = New Point(120, 120)
+                box.Size = New Size(50, 50)
+                Controls.Add(box)
+                box.BringToFront()
+                box.Image = My.Resources.Chest
 
-    End Sub
+            End If
+        Next
 
-    Sub EnemyMove()
+
 
     End Sub
 
