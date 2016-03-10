@@ -10,7 +10,7 @@
     Dim CurrentOverworldPos As Integer = 4
 
     'Enemies'
-    Dim EnemyMapLocation() As String
+    Dim EnemyMapLocation(9) As String
     Dim Enemies(10, 10, 2) As PictureBox
 
 
@@ -257,12 +257,12 @@
     Sub EnemySpawn()
         Dim EnemyLocal As String = Nothing
         For x As Integer = 0 To 9
-            EnemyLocal += Map(x)
+            EnemyLocal += EnemyMapLocation(x)
         Next
         For x As Integer = 0 To 89
             If EnemyLocal.Chars(x) = "G" Then
                 Dim box As PictureBox = New PictureBox
-                box.Location = New Point(120, 120)
+                box.Location = New Point(500, 500)
                 box.Size = New Size(50, 50)
                 Controls.Add(box)
                 box.BringToFront()
