@@ -277,7 +277,7 @@ Partial Class Form1
         '
         'Player
         '
-        Me.Player.Image = Global.TearsInTheReain.My.Resources.Resources.Player_Static
+        Me.Player.Image = Global.TearsInTheReain.My.Resources.Resources.Player_Transparent
         Me.Player.Location = New System.Drawing.Point(300, 176)
         Me.Player.Name = "Player"
         Me.Player.Size = New System.Drawing.Size(50, 50)

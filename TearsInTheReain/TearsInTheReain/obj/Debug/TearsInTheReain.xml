@@ -77,6 +77,11 @@ TearsInTheReain
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:TearsInTheReain.My.Resources.Resources.Player_Transparent">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:TearsInTheReain.My.Resources.Resources.Tile">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

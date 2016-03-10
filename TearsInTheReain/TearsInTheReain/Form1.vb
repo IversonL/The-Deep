@@ -9,6 +9,7 @@
     Dim OverworldMap(3) As String
     Dim CurrentOverworldPos As Integer = 4
 
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Map = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
@@ -21,6 +22,7 @@
         Tile95, Tile96, Tile97, Tile98, Tile99, Tile100}
 
         LoadMap = True
+
         Call Overworld()
 
 
@@ -42,6 +44,7 @@
             Direction = 2
         End If
         Call CollisionDetection()
+
 
     End Sub
 
@@ -235,6 +238,18 @@
                 Me.Player.Image.RotateFlip(RotateFlipType.Rotate180FlipNone)
             End If
         End If
+    End Sub
+
+    Sub EnemyRead()
+
+    End Sub
+
+    Sub EnemySpawn()
+
+    End Sub
+
+    Sub EnemyMove()
+
     End Sub
 
 End Class

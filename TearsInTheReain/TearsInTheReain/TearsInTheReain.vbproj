@@ -72,7 +72,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Draw Enemy.vb" />
+    <Compile Include="Chest.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +158,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Chest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Player_Transparent.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
