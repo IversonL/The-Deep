@@ -11,7 +11,7 @@
 
     'Enemies'
     Dim EnemyMapLocation(9) As String
-    Dim Enemies(10, 10, 2) As PictureBox
+    Dim Enemies(9) As PictureBox
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -261,13 +261,9 @@
         Next
         For x As Integer = 0 To 89
             If EnemyLocal.Chars(x) = "G" Then
-                Dim box As PictureBox = New PictureBox
-                box.Location = New Point(500, 500)
-                box.Size = New Size(50, 50)
-                Controls.Add(box)
-                box.BringToFront()
-                box.Image = My.Resources.Chest
-
+                Dim box As New Goblin
+                box.Spawn(Enemies(0))
+                Me.Controls.Add(Enemies(0))
             End If
         Next
 
