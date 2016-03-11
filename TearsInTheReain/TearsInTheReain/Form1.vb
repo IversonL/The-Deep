@@ -10,8 +10,10 @@
     Dim CurrentOverworldPos As Integer = 4
 
     'Enemies'
+    Dim EnemyLocalCount As Integer = -1
     Dim EnemyMapLocation(9) As String
-    Dim Enemies(9) As PictureBox
+    Dim EnemySprite As PictureBox
+    Dim Enemy(9) As Object
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -48,6 +50,7 @@
             Direction = 2
         End If
         Call CollisionDetection()
+ 
 
 
     End Sub
@@ -82,6 +85,7 @@
             LoadMap = False
         Else
             Call PlayerAnimation(PlayerAttack)
+            Call EnemyAI()
 
 
         End If
@@ -261,14 +265,19 @@
         Next
         For x As Integer = 0 To 89
             If EnemyLocal.Chars(x) = "G" Then
-                Dim box As New Goblin
-                box.Spawn(Enemies(0))
-                Me.Controls.Add(Enemies(0))
+                EnemyLocalCount += 1
+                Enemy(EnemyLocalCount) = New Goblin
+                Enemy(EnemyLocalCount).Spawn(EnemySprite)
+                Me.Controls.Add(EnemySprite)
+                EnemySprite.BringToFront()
             End If
         Next
+    End Sub
 
-
-
+    Sub EnemyAI()
+        For x As Integer = 0 To EnemyLocalCount
+            Enemy(x).movement()
+        Next
     End Sub
 
 End Class
