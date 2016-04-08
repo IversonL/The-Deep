@@ -24,10 +24,9 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.GameLoop = New System.Windows.Forms.Timer(Me.components)
-        Me.lblRoomName = New System.Windows.Forms.Label()
-        Me.lblStrength = New System.Windows.Forms.Label()
-        Me.lblDex = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.EnemyBox3 = New System.Windows.Forms.PictureBox()
+        Me.EnemyBox2 = New System.Windows.Forms.PictureBox()
+        Me.EnemyBox = New System.Windows.Forms.PictureBox()
         Me.Player = New System.Windows.Forms.PictureBox()
         Me.Tile100 = New System.Windows.Forms.PictureBox()
         Me.Tile99 = New System.Windows.Forms.PictureBox()
@@ -129,6 +128,11 @@ Partial Class Form1
         Me.Tile3 = New System.Windows.Forms.PictureBox()
         Me.Tile2 = New System.Windows.Forms.PictureBox()
         Me.Tile1 = New System.Windows.Forms.PictureBox()
+        Me.Command = New System.Windows.Forms.Label()
+        Me.List = New System.Windows.Forms.Label()
+        CType(Me.EnemyBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EnemyBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EnemyBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Player, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tile100, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tile99, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -235,54 +239,39 @@ Partial Class Form1
         'GameLoop
         '
         '
-        'lblRoomName
+        'EnemyBox3
         '
-        Me.lblRoomName.AutoSize = True
-        Me.lblRoomName.ForeColor = System.Drawing.Color.Green
-        Me.lblRoomName.Location = New System.Drawing.Point(606, 26)
-        Me.lblRoomName.Name = "lblRoomName"
-        Me.lblRoomName.Size = New System.Drawing.Size(38, 13)
-        Me.lblRoomName.TabIndex = 101
-        Me.lblRoomName.Text = "Room:"
+        Me.EnemyBox3.Location = New System.Drawing.Point(606, 476)
+        Me.EnemyBox3.Name = "EnemyBox3"
+        Me.EnemyBox3.Size = New System.Drawing.Size(50, 50)
+        Me.EnemyBox3.TabIndex = 103
+        Me.EnemyBox3.TabStop = False
         '
-        'lblStrength
+        'EnemyBox2
         '
-        Me.lblStrength.AutoSize = True
-        Me.lblStrength.ForeColor = System.Drawing.Color.Green
-        Me.lblStrength.Location = New System.Drawing.Point(606, 76)
-        Me.lblStrength.Name = "lblStrength"
-        Me.lblStrength.Size = New System.Drawing.Size(50, 13)
-        Me.lblStrength.TabIndex = 102
-        Me.lblStrength.Text = "Strength:"
+        Me.EnemyBox2.Location = New System.Drawing.Point(606, 476)
+        Me.EnemyBox2.Name = "EnemyBox2"
+        Me.EnemyBox2.Size = New System.Drawing.Size(50, 50)
+        Me.EnemyBox2.TabIndex = 102
+        Me.EnemyBox2.TabStop = False
         '
-        'lblDex
+        'EnemyBox
         '
-        Me.lblDex.AutoSize = True
-        Me.lblDex.ForeColor = System.Drawing.Color.Green
-        Me.lblDex.Location = New System.Drawing.Point(606, 89)
-        Me.lblDex.Name = "lblDex"
-        Me.lblDex.Size = New System.Drawing.Size(51, 13)
-        Me.lblDex.TabIndex = 103
-        Me.lblDex.Text = "Dexterity:"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.ForeColor = System.Drawing.Color.Green
-        Me.Label1.Location = New System.Drawing.Point(606, 102)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(64, 13)
-        Me.Label1.TabIndex = 104
-        Me.Label1.Text = "Intelligence:"
+        Me.EnemyBox.Location = New System.Drawing.Point(606, 476)
+        Me.EnemyBox.Name = "EnemyBox"
+        Me.EnemyBox.Size = New System.Drawing.Size(50, 50)
+        Me.EnemyBox.TabIndex = 101
+        Me.EnemyBox.TabStop = False
         '
         'Player
         '
-        Me.Player.Image = Global.TearsInTheReain.My.Resources.Resources.Player_Transparent
+        Me.Player.Image = Global.TearsInTheReain.My.Resources.Resources.Player_Connor
         Me.Player.Location = New System.Drawing.Point(300, 176)
         Me.Player.Name = "Player"
         Me.Player.Size = New System.Drawing.Size(50, 50)
         Me.Player.TabIndex = 100
         Me.Player.TabStop = False
+        Me.Player.Tag = "Player"
         '
         'Tile100
         '
@@ -1086,16 +1075,36 @@ Partial Class Form1
         Me.Tile1.TabIndex = 0
         Me.Tile1.TabStop = False
         '
+        'Command
+        '
+        Me.Command.AutoSize = True
+        Me.Command.ForeColor = System.Drawing.Color.Green
+        Me.Command.Location = New System.Drawing.Point(606, 26)
+        Me.Command.Name = "Command"
+        Me.Command.Size = New System.Drawing.Size(25, 13)
+        Me.Command.TabIndex = 104
+        Me.Command.Text = "Log"
+        '
+        'List
+        '
+        Me.List.AutoSize = True
+        Me.List.ForeColor = System.Drawing.Color.Green
+        Me.List.Location = New System.Drawing.Point(606, 48)
+        Me.List.Name = "List"
+        Me.List.Size = New System.Drawing.Size(0, 13)
+        Me.List.TabIndex = 105
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.ClientSize = New System.Drawing.Size(771, 553)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.lblDex)
-        Me.Controls.Add(Me.lblStrength)
-        Me.Controls.Add(Me.lblRoomName)
+        Me.Controls.Add(Me.List)
+        Me.Controls.Add(Me.Command)
+        Me.Controls.Add(Me.EnemyBox3)
+        Me.Controls.Add(Me.EnemyBox2)
+        Me.Controls.Add(Me.EnemyBox)
         Me.Controls.Add(Me.Player)
         Me.Controls.Add(Me.Tile100)
         Me.Controls.Add(Me.Tile99)
@@ -1199,6 +1208,9 @@ Partial Class Form1
         Me.Controls.Add(Me.Tile1)
         Me.Name = "Form1"
         Me.Text = "Tears in the Rain"
+        CType(Me.EnemyBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EnemyBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EnemyBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Player, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tile100, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tile99, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1407,8 +1419,9 @@ Partial Class Form1
     Friend WithEvents Tile81 As PictureBox
     Friend WithEvents Player As PictureBox
     Friend WithEvents GameLoop As Timer
-    Friend WithEvents lblRoomName As Label
-    Friend WithEvents lblStrength As Label
-    Friend WithEvents lblDex As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents EnemyBox As PictureBox
+    Friend WithEvents EnemyBox2 As PictureBox
+    Friend WithEvents EnemyBox3 As PictureBox
+    Friend WithEvents Command As Label
+    Friend WithEvents List As Label
 End Class

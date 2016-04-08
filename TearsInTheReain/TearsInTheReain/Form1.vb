@@ -10,10 +10,10 @@
     Dim CurrentOverworldPos As Integer = 4
 
     'Enemies'
-    Dim EnemyLocalCount As Integer = -1
-    Dim EnemyMapLocation(9) As String
-    Dim EnemySprite As PictureBox
+    Dim EnemyCount As Integer = -1
+    Dim EnemyMapLocation(9, 9) As String
     Dim Enemy(9) As Object
+    Dim EnemySprites() As PictureBox
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -26,10 +26,12 @@
         Tile51, Tile52, Tile53, Tile54, Tile55, Tile56, Tile57, Tile58, Tile59, Tile60, Tile61, Tile62, Tile63, Tile64, Tile65, Tile66, Tile67, Tile68, Tile69, Tile70, Tile71,
         Tile72, Tile73, Tile74, Tile75, Tile76, Tile77, Tile78, Tile79, Tile80, Tile81, Tile82, Tile83, Tile84, Tile85, Tile86, Tile87, Tile88, Tile89, Tile90, Tile91, Tile92, Tile93, Tile94,
         Tile95, Tile96, Tile97, Tile98, Tile99, Tile100}
+        EnemySprites = {EnemyBox, EnemyBox2, EnemyBox3}
 
         LoadMap = True
 
         Call Overworld()
+        Call EnemyRead()
 
 
     End Sub
@@ -50,7 +52,7 @@
             Direction = 2
         End If
         Call CollisionDetection()
- 
+
 
 
     End Sub
@@ -61,13 +63,13 @@
             Tile43.Click, Tile44.Click, Tile45.Click, Tile46.Click, Tile47.Click, Tile48.Click, Tile49.Click, Tile50.Click, Tile51.Click, Tile52.Click, Tile53.Click, Tile54.Click, Tile55.Click, Tile56.Click, Tile57.Click, Tile58.Click, Tile59.Click,
             Tile60.Click, Tile61.Click, Tile62.Click, Tile63.Click, Tile64.Click, Tile65.Click, Tile66.Click, Tile67.Click, Tile68.Click, Tile69.Click, Tile70.Click, Tile71.Click, Tile72.Click, Tile73.Click, Tile74.Click, Tile75.Click, Tile76.Click,
             Tile77.Click, Tile78.Click, Tile79.Click, Tile80.Click, Tile81.Click, Tile82.Click, Tile83.Click, Tile84.Click, Tile85.Click, Tile86.Click, Tile87.Click, Tile88.Click, Tile89.Click, Tile90.Click, Tile91.Click, Tile92.Click, Tile93.Click,
-            Tile94.Click, Tile95.Click, Tile96.Click, Tile97.Click, Tile98.Click, Tile99.Click, Tile100.Click
+            Tile94.Click, Tile95.Click, Tile96.Click, Tile97.Click, Tile98.Click, Tile99.Click, Tile100.Click, EnemyBox.Click, EnemyBox2.Click, EnemyBox3.Click
 
         Dim ClickedBox As PictureBox
         ClickedBox = CType(sender, PictureBox)
 
-        If ClickedBox.Tag = 5 Then
-            Call ItemClick(ClickedBox)
+        If ClickedBox.Tag = 6 Then
+            EnemyClick()
         Else
             Call Attack()
         End If
@@ -80,7 +82,6 @@
         If LoadMap = True Then
             Call MapRead()
             Call MapLoad()
-            Call EnemyRead()
             Call EnemySpawn()
             LoadMap = False
         Else
@@ -140,10 +141,10 @@
         Next
         For x As Integer = 0 To 89
             If MapLocal.Chars(x) = "1" Then
-                grid(x).Image = My.Resources.BrickWall
+                grid(x).Image = My.Resources.Brickwall_Connor
                 grid(x).Tag = 1
             ElseIf MapLocal.Chars(x) = "2" Then
-                grid(x).Image = My.Resources.Floor
+                grid(x).Image = My.Resources.Floor_Connor
                 grid(x).Tag = 2
             ElseIf MapLocal.Chars(x) = "3" Then
                 grid(x).Image = My.Resources.Concrete
@@ -169,6 +170,14 @@
         End If
     End Sub
 
+    Sub EnemyClick()
+        For x As Integer = 0 To EnemyCount
+            If ((EnemySprites(x).Bounds.Y + 50) >= Player.Bounds.Y And Player.Bounds.Y >= (EnemySprites(x).Bounds.Y - 50)) And ((EnemySprites(x).Bounds.X + 50) >= Player.Bounds.X And Player.Bounds.X >= (EnemySprites(x).Bounds.X - 50)) Then
+                Enemy(x).GoblinHit(List)
+            End If
+        Next
+    End Sub
+
 
     Sub CollisionDetection()
 
@@ -184,9 +193,13 @@
             End If
         Next
 
-
-
-
+        For x As Integer = 0 To 2
+            If EnemySprites(x).Tag = 6 Then
+                If Player.Bounds.IntersectsWith(EnemySprites(x).Bounds) Then
+                    Call CollisionType(1)
+                End If
+            End If
+        Next
     End Sub
 
     Sub CollisionType(ByRef x As Integer)
@@ -241,7 +254,7 @@
                 Me.Player.Image.RotateFlip(RotateFlipType.Rotate270FlipNone)
             End If
         Else
-            Me.Player.Image = My.Resources.Player_Static
+            Me.Player.Image = My.Resources.Player_Connor
             If Direction = 2 Or Direction = 4 Then
                 Me.Player.Image.RotateFlip(RotateFlipType.Rotate90FlipNone)
             Else
@@ -251,34 +264,65 @@
     End Sub
 
     Sub EnemyRead()
+
         Dim EnemyReader As System.IO.StreamReader
-        EnemyReader = My.Computer.FileSystem.OpenTextFileReader("C:\Users\Liam Iverson\Desktop\DungeonCrawl\EnemyLocations\EnemySpawn" & CurrentMap & ".txt")
-        For x As Integer = 0 To 9
-            EnemyMapLocation(x) = EnemyReader.ReadLine
+
+        For x As Integer = 1 To 3
+
+            Dim Map As String = Nothing
+            EnemyReader = My.Computer.FileSystem.OpenTextFileReader("C:\Users\Liam Iverson\Desktop\DungeonCrawl\EnemyLocations\EnemySpawn" & x & ".txt")
+
+            For y As Integer = 0 To 9
+                EnemyMapLocation(x, y) = EnemyReader.ReadLine
+                Map += EnemyMapLocation(x, y)
+            Next
+
+            For z As Integer = 0 To 89
+                If Map.Chars(z) = "G" Then
+                    EnemyCount += 1
+                    Enemy(EnemyCount) = New Goblin
+                    Enemy(EnemyCount).Create(grid(z).Location.X, grid(z).Location.Y, x, EnemyCount)
+
+
+                End If
+            Next
         Next
+
+
+
     End Sub
 
     Sub EnemySpawn()
-        Dim EnemyLocal As String = Nothing
-        For x As Integer = 0 To 9
-            EnemyLocal += EnemyMapLocation(x)
-        Next
-        For x As Integer = 0 To 89
-            If EnemyLocal.Chars(x) = "G" Then
-                EnemyLocalCount += 1
-                Enemy(EnemyLocalCount) = New Goblin
-                Enemy(EnemyLocalCount).Spawn(EnemySprite)
-                Me.Controls.Add(EnemySprite)
-                EnemySprite.BringToFront()
+        For x As Integer = 0 To EnemyCount
+            If Enemy(x).map = CurrentMap Then
+                Enemy(x).Spawn(EnemySprites(x))
+                Me.Controls.Add(EnemySprites(x))
+                EnemySprites(x).BringToFront()
+                EnemySprites(x).Tag = 6
+            Else
+                Enemy(x).Remove()
             End If
         Next
     End Sub
 
     Sub EnemyAI()
-        For x As Integer = 0 To EnemyLocalCount
-            Enemy(x).movement()
+        For x As Integer = 0 To EnemyCount
+            Enemy(x).Movement
+            EnemyCollisionCheck(x)
+            Enemy(x).StateCheck()
         Next
     End Sub
 
+    Sub EnemyCollisionCheck(ByRef y As Integer)
+        For x As Integer = 0 To 99
+            If (grid(x).Tag = 4) Or (grid(x).Tag = 1) Then
+                If EnemySprites(y).Bounds.IntersectsWith(grid(x).Bounds) Then
+                    Enemy(y).CollisionDetection()
+                End If
+            End If
+        Next
+        If EnemySprites(y).Bounds.IntersectsWith(Player.Bounds) Then
+            Enemy(y).CollisionDetection()
+        End If
+    End Sub
 End Class
-

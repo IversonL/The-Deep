@@ -27,6 +27,11 @@ TearsInTheReain
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:TearsInTheReain.My.Resources.Resources.Brickwall_Connor">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:TearsInTheReain.My.Resources.Resources.Chest">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -52,6 +57,21 @@ TearsInTheReain
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:TearsInTheReain.My.Resources.Resources.Floor_Connor">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TearsInTheReain.My.Resources.Resources.Goblin">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TearsInTheReain.My.Resources.Resources.Player_Connor">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:TearsInTheReain.My.Resources.Resources.Player_Punch">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -73,6 +93,11 @@ TearsInTheReain
 </summary>
 </member>
 <member name="P:TearsInTheReain.My.Resources.Resources.Player_Static_Resized">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TearsInTheReain.My.Resources.Resources.Player_Static1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
