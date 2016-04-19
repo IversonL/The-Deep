@@ -1,7 +1,7 @@
-﻿Public Class Goblin
+﻿Public Class BrokenWall
     Public Hp As Integer
     Public Attack As Integer
-    Public GoblinSprite As PictureBox = New PictureBox
+    Public WallSprite As PictureBox = New PictureBox
     Public XPos As Integer
     Public YPos As Integer
     Public Map As Integer
@@ -17,10 +17,9 @@
         Map = CurrentMap
         ID = CurrentEnemy
         Randomize()
-        Hp = 10 * Rnd()
-
-
+        Hp = 10
     End Sub
+
     Sub StateCheck()
         If Hp < 1 Then
             IsAlive = False
@@ -30,13 +29,13 @@
 
     Sub Spawn(ByRef Sprite As PictureBox)
         If IsAlive = True Then
-            GoblinSprite.Visible = True
+            WallSprite.Visible = True
             Sprite.Location = New Point(XPos, YPos)
             Sprite.Size = New Size(50, 50)
             Sprite.BringToFront()
-            Sprite.Image = My.Resources.Goblin
-            GoblinSprite = Sprite
-            GoblinSprite.Tag = 6
+            Sprite.Image = My.Resources.Brickwall_Connor
+            WallSprite = Sprite
+            WallSprite.Tag = 6
         Else
             Remove()
         End If
@@ -45,35 +44,17 @@
     End Sub
 
     Sub Remove()
-        GoblinSprite.Visible = False
-        GoblinSprite.Tag = 0
-        GoblinSprite.SendToBack()
+        WallSprite.Visible = False
+        WallSprite.Tag = 0
+        WallSprite.SendToBack()
     End Sub
 
     Sub Movement()
-        Randomize()
-        Direction = 3
-        If Direction = 1 Then
-            Me.GoblinSprite.Top += 5
-        ElseIf Direction = 2 Then
-            Me.GoblinSprite.Left -= 5
-        ElseIf Direction = 3 Then
-            Me.GoblinSprite.Top -= 5
-        ElseIf Direction = 4 Then
-            Me.GoblinSprite.Left += 5
-        End If
+
     End Sub
 
     Sub CollisionDetection()
-        If Direction = 1 Then
-            Me.GoblinSprite.Top -= 5
-        ElseIf Direction = 2 Then
-            Me.GoblinSprite.Left += 5
-        ElseIf Direction = 3 Then
-            Me.GoblinSprite.Top += 5
-        ElseIf Direction = 4 Then
-            Me.GoblinSprite.Left -= 5
-        End If
+
     End Sub
 
     Sub GoblinAttack()

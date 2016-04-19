@@ -24,6 +24,15 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.GameLoop = New System.Windows.Forms.Timer(Me.components)
+        Me.List = New System.Windows.Forms.Label()
+        Me.Command = New System.Windows.Forms.Label()
+        Me.ItemImage = New System.Windows.Forms.PictureBox()
+        Me.ItemBox6 = New System.Windows.Forms.PictureBox()
+        Me.ItemBox5 = New System.Windows.Forms.PictureBox()
+        Me.ItemBox4 = New System.Windows.Forms.PictureBox()
+        Me.ItemBox3 = New System.Windows.Forms.PictureBox()
+        Me.ItemBox2 = New System.Windows.Forms.PictureBox()
+        Me.ItemBox1 = New System.Windows.Forms.PictureBox()
         Me.EnemyBox3 = New System.Windows.Forms.PictureBox()
         Me.EnemyBox2 = New System.Windows.Forms.PictureBox()
         Me.EnemyBox = New System.Windows.Forms.PictureBox()
@@ -128,8 +137,14 @@ Partial Class Form1
         Me.Tile3 = New System.Windows.Forms.PictureBox()
         Me.Tile2 = New System.Windows.Forms.PictureBox()
         Me.Tile1 = New System.Windows.Forms.PictureBox()
-        Me.Command = New System.Windows.Forms.Label()
-        Me.List = New System.Windows.Forms.Label()
+        Me.Setting = New System.Windows.Forms.PictureBox()
+        CType(Me.ItemImage, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ItemBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ItemBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ItemBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ItemBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ItemBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ItemBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnemyBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnemyBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnemyBox, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -234,14 +249,90 @@ Partial Class Form1
         CType(Me.Tile3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tile2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Tile1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Setting, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GameLoop
         '
         '
+        'List
+        '
+        Me.List.AutoSize = True
+        Me.List.ForeColor = System.Drawing.Color.Green
+        Me.List.Location = New System.Drawing.Point(606, 48)
+        Me.List.Name = "List"
+        Me.List.Size = New System.Drawing.Size(0, 13)
+        Me.List.TabIndex = 105
+        '
+        'Command
+        '
+        Me.Command.AutoSize = True
+        Me.Command.ForeColor = System.Drawing.Color.Green
+        Me.Command.Location = New System.Drawing.Point(606, 26)
+        Me.Command.Name = "Command"
+        Me.Command.Size = New System.Drawing.Size(25, 13)
+        Me.Command.TabIndex = 104
+        Me.Command.Text = "Log"
+        '
+        'ItemImage
+        '
+        Me.ItemImage.Location = New System.Drawing.Point(606, 338)
+        Me.ItemImage.Name = "ItemImage"
+        Me.ItemImage.Size = New System.Drawing.Size(177, 188)
+        Me.ItemImage.TabIndex = 113
+        Me.ItemImage.TabStop = False
+        '
+        'ItemBox6
+        '
+        Me.ItemBox6.Location = New System.Drawing.Point(609, 420)
+        Me.ItemBox6.Name = "ItemBox6"
+        Me.ItemBox6.Size = New System.Drawing.Size(50, 50)
+        Me.ItemBox6.TabIndex = 112
+        Me.ItemBox6.TabStop = False
+        '
+        'ItemBox5
+        '
+        Me.ItemBox5.Location = New System.Drawing.Point(609, 420)
+        Me.ItemBox5.Name = "ItemBox5"
+        Me.ItemBox5.Size = New System.Drawing.Size(50, 50)
+        Me.ItemBox5.TabIndex = 111
+        Me.ItemBox5.TabStop = False
+        '
+        'ItemBox4
+        '
+        Me.ItemBox4.Location = New System.Drawing.Point(609, 420)
+        Me.ItemBox4.Name = "ItemBox4"
+        Me.ItemBox4.Size = New System.Drawing.Size(50, 50)
+        Me.ItemBox4.TabIndex = 110
+        Me.ItemBox4.TabStop = False
+        '
+        'ItemBox3
+        '
+        Me.ItemBox3.Location = New System.Drawing.Point(609, 420)
+        Me.ItemBox3.Name = "ItemBox3"
+        Me.ItemBox3.Size = New System.Drawing.Size(50, 50)
+        Me.ItemBox3.TabIndex = 109
+        Me.ItemBox3.TabStop = False
+        '
+        'ItemBox2
+        '
+        Me.ItemBox2.Location = New System.Drawing.Point(609, 420)
+        Me.ItemBox2.Name = "ItemBox2"
+        Me.ItemBox2.Size = New System.Drawing.Size(50, 50)
+        Me.ItemBox2.TabIndex = 108
+        Me.ItemBox2.TabStop = False
+        '
+        'ItemBox1
+        '
+        Me.ItemBox1.Location = New System.Drawing.Point(609, 420)
+        Me.ItemBox1.Name = "ItemBox1"
+        Me.ItemBox1.Size = New System.Drawing.Size(50, 50)
+        Me.ItemBox1.TabIndex = 107
+        Me.ItemBox1.TabStop = False
+        '
         'EnemyBox3
         '
-        Me.EnemyBox3.Location = New System.Drawing.Point(606, 476)
+        Me.EnemyBox3.Location = New System.Drawing.Point(609, 476)
         Me.EnemyBox3.Name = "EnemyBox3"
         Me.EnemyBox3.Size = New System.Drawing.Size(50, 50)
         Me.EnemyBox3.TabIndex = 103
@@ -249,7 +340,7 @@ Partial Class Form1
         '
         'EnemyBox2
         '
-        Me.EnemyBox2.Location = New System.Drawing.Point(606, 476)
+        Me.EnemyBox2.Location = New System.Drawing.Point(609, 476)
         Me.EnemyBox2.Name = "EnemyBox2"
         Me.EnemyBox2.Size = New System.Drawing.Size(50, 50)
         Me.EnemyBox2.TabIndex = 102
@@ -257,7 +348,7 @@ Partial Class Form1
         '
         'EnemyBox
         '
-        Me.EnemyBox.Location = New System.Drawing.Point(606, 476)
+        Me.EnemyBox.Location = New System.Drawing.Point(609, 476)
         Me.EnemyBox.Name = "EnemyBox"
         Me.EnemyBox.Size = New System.Drawing.Size(50, 50)
         Me.EnemyBox.TabIndex = 101
@@ -266,7 +357,7 @@ Partial Class Form1
         'Player
         '
         Me.Player.Image = Global.TearsInTheReain.My.Resources.Resources.Player_Connor
-        Me.Player.Location = New System.Drawing.Point(300, 176)
+        Me.Player.Location = New System.Drawing.Point(500, 426)
         Me.Player.Name = "Player"
         Me.Player.Size = New System.Drawing.Size(50, 50)
         Me.Player.TabIndex = 100
@@ -1075,31 +1166,27 @@ Partial Class Form1
         Me.Tile1.TabIndex = 0
         Me.Tile1.TabStop = False
         '
-        'Command
+        'Setting
         '
-        Me.Command.AutoSize = True
-        Me.Command.ForeColor = System.Drawing.Color.Green
-        Me.Command.Location = New System.Drawing.Point(606, 26)
-        Me.Command.Name = "Command"
-        Me.Command.Size = New System.Drawing.Size(25, 13)
-        Me.Command.TabIndex = 104
-        Me.Command.Text = "Log"
-        '
-        'List
-        '
-        Me.List.AutoSize = True
-        Me.List.ForeColor = System.Drawing.Color.Green
-        Me.List.Location = New System.Drawing.Point(606, 48)
-        Me.List.Name = "List"
-        Me.List.Size = New System.Drawing.Size(0, 13)
-        Me.List.TabIndex = 105
+        Me.Setting.Location = New System.Drawing.Point(12, 12)
+        Me.Setting.Name = "Setting"
+        Me.Setting.Size = New System.Drawing.Size(1236, 530)
+        Me.Setting.TabIndex = 106
+        Me.Setting.TabStop = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ClientSize = New System.Drawing.Size(771, 553)
+        Me.ClientSize = New System.Drawing.Size(1255, 553)
+        Me.Controls.Add(Me.ItemImage)
+        Me.Controls.Add(Me.ItemBox6)
+        Me.Controls.Add(Me.ItemBox5)
+        Me.Controls.Add(Me.ItemBox4)
+        Me.Controls.Add(Me.ItemBox3)
+        Me.Controls.Add(Me.ItemBox2)
+        Me.Controls.Add(Me.ItemBox1)
         Me.Controls.Add(Me.List)
         Me.Controls.Add(Me.Command)
         Me.Controls.Add(Me.EnemyBox3)
@@ -1206,8 +1293,16 @@ Partial Class Form1
         Me.Controls.Add(Me.Tile3)
         Me.Controls.Add(Me.Tile2)
         Me.Controls.Add(Me.Tile1)
+        Me.Controls.Add(Me.Setting)
         Me.Name = "Form1"
         Me.Text = "Tears in the Rain"
+        CType(Me.ItemImage, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ItemBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ItemBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ItemBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ItemBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ItemBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ItemBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnemyBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnemyBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnemyBox, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1312,6 +1407,7 @@ Partial Class Form1
         CType(Me.Tile3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tile2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Tile1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Setting, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1422,6 +1518,14 @@ Partial Class Form1
     Friend WithEvents EnemyBox As PictureBox
     Friend WithEvents EnemyBox2 As PictureBox
     Friend WithEvents EnemyBox3 As PictureBox
-    Friend WithEvents Command As Label
+    Friend WithEvents Setting As PictureBox
     Friend WithEvents List As Label
+    Friend WithEvents Command As Label
+    Friend WithEvents ItemBox1 As PictureBox
+    Friend WithEvents ItemBox2 As PictureBox
+    Friend WithEvents ItemBox3 As PictureBox
+    Friend WithEvents ItemBox4 As PictureBox
+    Friend WithEvents ItemBox5 As PictureBox
+    Friend WithEvents ItemBox6 As PictureBox
+    Friend WithEvents ItemImage As PictureBox
 End Class

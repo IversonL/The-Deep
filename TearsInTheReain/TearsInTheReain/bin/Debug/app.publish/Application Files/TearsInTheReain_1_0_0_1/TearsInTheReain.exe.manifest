@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="TearsInTheReain.exe" version="1.0.0.1" publicKeyToken="4c52e45fd805aae1" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="TearsInTheReain" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="TearsInTheReain.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TearsInTheReain.exe" size="112648">
+      <assemblyIdentity name="TearsInTheReain" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>U9EhMtzjxMmPFRxjWktfJNBbBw8Gng7j8I1oxO5LX80=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="TearsInTheReain.exe.config" size="188">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>j5XMowm9qYcyNWR87Ke1KpLLXBlaYAR38CaZywZFE9o=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-RMHCF1B\Liam Iverson" issuerKeyHash="a3572ceb3b5862e978bdc935e6f026980e5e41fd" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>ThvfCHm2dBe0DmL1XwS6YDD77v+FgebC8eubkJ/ndXw=</DigestValue></Reference></SignedInfo><SignatureValue>tmJBJXXxfhMAcL2Xpz+m2Vu+WlKDv8ENKNmRMRE/n5VPuSPpqh4WZxbsPx36uxhYbwvF4bXkNL0P3F3rrnPwirjjPvjAoRy3VS5sRUXdNZfjB32RXz5oPPTVGapvtJ+y9q1iySwgwzcP+dkHdPJoyBnlPlxu+9mKK3q0rB0l9XI=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>wqmI+x+Zu8kVsyJD2TnvZLmUAUydI49TYaLMrwBvpH3+NP7/aHj/KEKkAlePBocd3MnpJ1PgdJvVF/VTgCdE2jrZQb7USNnjvYp+LzrBw7RwZ2GMR1wPUoVf9OQAKXtfD7NB6acMTz/sGo1fDJlrG7MvGNZOo0o36ze2CpZvl10=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="7c75e79f909bebf1c2e68185ffeefb3060ba045ff5620eb41774b67908df1b4e" Description="" Url=""><as:assemblyIdentity name="TearsInTheReain.exe" version="1.0.0.1" publicKeyToken="4c52e45fd805aae1" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-RMHCF1B\Liam Iverson</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>yqeQSsGZXh3NCGqY4Oo7FbdNDFPe8O2lZ7XfJINwUOo=</DigestValue></Reference></SignedInfo><SignatureValue>BnUZRCbSrGD8JO60X3g17JRAukjDLOYsBuMQXF3oSIpAj2CHb4r41bUltWXylEtUqNfK9g5G5KYiB/i5EWF9ZVy3guqMHPWHM6b6X1wMy/aoXgozLq3X174rFLQ0ZY8x8LWYty0ztHyBfl5N0bgaLkz8S4ChG0FB/HBpeFipXaY=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>wqmI+x+Zu8kVsyJD2TnvZLmUAUydI49TYaLMrwBvpH3+NP7/aHj/KEKkAlePBocd3MnpJ1PgdJvVF/VTgCdE2jrZQb7USNnjvYp+LzrBw7RwZ2GMR1wPUoVf9OQAKXtfD7NB6acMTz/sGo1fDJlrG7MvGNZOo0o36ze2CpZvl10=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIICCTCCAXKgAwIBAgIQXySZqsjF9IFA6g8u9jdtqzANBgkqhkiG9w0BAQsFADBDMUEwPwYDVQQDHjgARABFAFMASwBUAE8AUAAtAFIATQBIAEMARgAxAEIAXABMAGkAYQBtACAASQB2AGUAcgBzAG8AbjAeFw0xNjA0MTkxNTExMDBaFw0xNzA0MTkyMTExMDBaMEMxQTA/BgNVBAMeOABEAEUAUwBLAFQATwBQAC0AUgBNAEgAQwBGADEAQgBcAEwAaQBhAG0AIABJAHYAZQByAHMAbwBuMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDCqYj7H5m7yRWzIkPZOe9kuZQBTJ0jj1NhosyvAG+kff40/v9oeP8oQqQCV48Ghx3cyeknU+B0m9UX9VOAJ0TaOtlBvtRI2eO9in4vOsHDtHBnYYxHXA9ShV/05AApe18Ps0HppwxPP+wajV8MmWsbsy8Y1k6jSjfrN7YKlm+XXQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAIWcpF53d56HOz5KX1bh3Yo+EcftVajxzwf8UarWJaO6T3K0RnqV9cv4R3Sfnwa53ubF4HuL0yZG7zEhL/a6faBNf+T7+jGrcqoTtd94tHpsRorWU8q7VsHPQgwj2YpkGUbsOdDWjBrp0z1U7RXnISRUHE4p32ITE0A1uC0Lkzdg</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

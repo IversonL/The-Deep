@@ -22,6 +22,11 @@ TearsInTheReain
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:TearsInTheReain.My.Resources.Resources.Bed">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:TearsInTheReain.My.Resources.Resources.BrickWall">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -52,6 +57,51 @@ TearsInTheReain
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:TearsInTheReain.My.Resources.Resources.Couch">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TearsInTheReain.My.Resources.Resources.Couch_1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TearsInTheReain.My.Resources.Resources.Couch_2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TearsInTheReain.My.Resources.Resources.Counter">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TearsInTheReain.My.Resources.Resources.Countertop">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TearsInTheReain.My.Resources.Resources.Desk">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TearsInTheReain.My.Resources.Resources.Door">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TearsInTheReain.My.Resources.Resources.Door1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TearsInTheReain.My.Resources.Resources.Door2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:TearsInTheReain.My.Resources.Resources.Floor">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -63,6 +113,26 @@ TearsInTheReain
 </summary>
 </member>
 <member name="P:TearsInTheReain.My.Resources.Resources.Goblin">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TearsInTheReain.My.Resources.Resources.Loose_Paper">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TearsInTheReain.My.Resources.Resources.Lose_Paper">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TearsInTheReain.My.Resources.Resources.Necronomicon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TearsInTheReain.My.Resources.Resources.Necronomicon1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -107,7 +177,27 @@ TearsInTheReain
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:TearsInTheReain.My.Resources.Resources.Sink">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TearsInTheReain.My.Resources.Resources.Table">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:TearsInTheReain.My.Resources.Resources.Tile">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TearsInTheReain.My.Resources.Resources.TitleCard">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:TearsInTheReain.My.Resources.Resources.Vet">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

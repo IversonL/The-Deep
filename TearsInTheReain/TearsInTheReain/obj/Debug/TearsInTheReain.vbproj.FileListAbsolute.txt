@@ -20,3 +20,8 @@ C:\Users\Liam Iverson\Documents\GitHub\The-Deep\TearsInTheReain\TearsInTheReain\
 C:\Users\Liam Iverson\Documents\GitHub\The-Deep\TearsInTheReain\TearsInTheReain\obj\Debug\TearsInTheReain.Form1.resources
 C:\Users\Liam Iverson\Documents\GitHub\The-Deep\TearsInTheReain\TearsInTheReain\obj\Debug\TearsInTheReain.Resources.resources
 C:\Users\Liam Iverson\Documents\GitHub\The-Deep\TearsInTheReain\TearsInTheReain\obj\Debug\TearsInTheReain.vbproj.GenerateResource.Cache
+C:\Users\Liam Iverson\Documents\GitHub\The-Deep\TearsInTheReain\TearsInTheReain\obj\Debug\TearsInTheReain.Form2.resources
+C:\Users\Liam Iverson\Documents\GitHub\The-Deep\TearsInTheReain\TearsInTheReain\bin\Debug\TearsInTheReain.exe.manifest
+C:\Users\Liam Iverson\Documents\GitHub\The-Deep\TearsInTheReain\TearsInTheReain\bin\Debug\TearsInTheReain.application
+C:\Users\Liam Iverson\Documents\GitHub\The-Deep\TearsInTheReain\TearsInTheReain\obj\Debug\TearsInTheReain.exe.manifest
+C:\Users\Liam Iverson\Documents\GitHub\The-Deep\TearsInTheReain\TearsInTheReain\obj\Debug\TearsInTheReain.application
